@@ -469,5 +469,5 @@ label day_4_2:
     "И это не могло не радовать."
     show blink
     $renpy.pause (2)
-    scene black
+    scene black with dissolve
     th "Продолжение следует."
