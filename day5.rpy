@@ -6,18 +6,25 @@ label label_day_6:
     $ renpy.block_rollback()
 
     play music music_list["door_to_nightmare"] fadein 2
-    scene bg darksov  with dissolve
+    scene bg darksov
     show prologue_dream
-    show pi far with dspr
+    show pi far
+    with dissolve
+
     pi "Вспоминай."
     ya "О чем ты?"
     pi "Ты и сам знаешь."
     pi "Сколько еще времени тебе нужно, чтобы понять?"
     ya "Я тебя не понимаю."
     pi "Скоро поймешь, но будет слишком поздно."
+
+    show black with dissolve
     stop music fadeout 2
+    $ renpy.pause (1, hard = True)
     scene bg dom with dissolve
-    #тут надо чтобы типа глаза открывались
+    hide black
+    with dissolve
+
     "О, боже."
     "Ну и хрень же приснится."
     "Оно и понятно. Столько событий за последние дни."
@@ -66,7 +73,7 @@ label label_day_6:
     "Съем позже или разделю с кем-то."
     stop music fadeout 2
     scene bg ext_square_day with dissolve2
-    play ambience ambience_day_countryside_ambience
+    play ambience ambience_day_countryside_ambience fadein 1
     show dv normal pioneer close at center with dissolve
     if alis1 == True:
         dv "Привет, пионер."
@@ -193,7 +200,7 @@ label day_5_1:
     "Ну вот. Так бы сразу, а то не хочу, не буду."
     stop ambience fadeout 2
     scene bg ext_square_day with dissolve2
-    play ambience ambience_day_countryside_ambience
+    play ambience ambience_day_countryside_ambience fadein 1
     "Я вернулся на площадь."
     "Из головы не выходил этот сон и тот странный пионер."
     "Странно искать в снах какую-то логику."
@@ -261,7 +268,7 @@ label day_5_1:
     "К ней я не питал ни капли жалости или угрызений совести."
     stop ambience fadeout 2
     scene bg ext_houses_day with dissolve2
-    play ambience ambience_day_countryside_ambience
+    play ambience ambience_day_countryside_ambience fadein 1
     "После обеда хотелось пройтись и еще раз подумать о чем-то, но лучше не попадаться кому-либо на глаза."
     "Будто каждый в этом лагере только и ждет, как бы достать меня своими разговорами."
     "Пойти прогуляться по лесу?"
@@ -282,13 +289,13 @@ label day_5_1:
     ya "Ладно, пойдем."
     stop ambience fadeout 2
     scene bg ext_aidpost_day with dissolve2
-    play ambience ambience_day_countryside_ambience
+    play ambience ambience_day_countryside_ambience fadein 1
     "Алиса разделилась со мной, не доходя до медпункта."
     "Отправилась занимать позицию в ближайших кустах, чтобы потом незаметно проскочить."
     stop ambience fadeout 2
     scene bg int_aidpost_day with dissolve2
     play sound sfx_open_door_1
-    play ambience ambience_day_countryside_ambience
+    play ambience ambience_day_countryside_ambience fadein 1
     "На удивление, медсестры не было на месте. За столом в ее отсутствие сидела Лена, листающая журнал."
     "Она даже не сразу заметила меня."
     show un normal pioneer close at center
@@ -304,7 +311,7 @@ label day_5_1:
     ya "Так нужно. Ничего за пару минут не случится."
     stop ambience fadeout 2
     scene bg ext_aidpost_day with dissolve2
-    play ambience ambience_day_countryside_ambience
+    play ambience ambience_day_countryside_ambience fadein 1
     play sound sfx_open_door_1
     show un smile pioneer close at center with dissolve
     "Лена на улице, Алиса тут же заскочила внутрь."
@@ -336,14 +343,17 @@ label day_5_1:
     "Все таки, Алисе стоит объясниться."
     "Где ее теперь искать только?"
     "Сама найдет. А я пойду куда планировал. Отдохну утомляющих социальных контактов."
+
     stop ambience fadeout 2
-    scene bg dom with dissolve2
-    play ambience ambience_day_countryside_ambience
-    scene black
-    show pi smile close at center
-    $renpy.pause (0.5)
+    scene black with dissolve
+    $ renpy.pause (0.3, hard = True)
+    show pi smile close at center with dspr
+    $ renpy.pause (0.5, hard = True)
     hide pi with dspr
+    $ renpy.pause (0.3, hard = True)
+    play ambience ambience_day_countryside_ambience fadein 1
     scene bg dom with dissolve
+    
     "Странный пионер."
     "Я не видел его на утренних линейках или на площади."
     "Даже в столовой за все эти дни, хотя туда приходят все отряды без исключения."
@@ -359,8 +369,8 @@ label day_5_1:
     "Какого..."
     "От грохота я слегка испугался."
     stop ambience fadeout 2
-    scene bg ext_houses_sunset with dissolve2
-    play ambience ambience_day_countryside_ambience
+    scene bg ext_houses_sunset with dissolve
+    play ambience ambience_day_countryside_ambience fadein 1
     play sound sfx_open_door_1
     "Я вышел на улицу, осмотреться."
     "Грохот привлек не только мое внимание."
@@ -390,9 +400,9 @@ label day_5_1:
     "Вроде ушла."
     "Надо сообщить Алисе, что угроза миновала."
     stop ambience fadeout 2
-    scene bg dom with dissolve2
-    play ambience ambience_day_countryside_ambience
-    show dv smile pioneer2 close at center with dspr
+    scene bg dom
+    show dv smile pioneer2 close at center
+    with dissolve
     dv "Ушла?"
     ya "Да, не выдал тебя, как видишь."
     ya "Хоть и мог."
@@ -459,7 +469,7 @@ label day_5_3:
     stop ambience fadeout 1
     play ambience ambience_dining_hall_full fadein 1
     scene bg int_dining_hall_people_day with dissolve
-    "Вот так стремительно пролетел очреедной день."
+    "Вот так стремительно пролетел очередной день."
     "Едва проснулся, а уже ужин."
     "Все хорошее, что было остается в прошлом, а впереди ждет лишь пугающая неизвестность."
     "Дни идут, а я ни на шаг не продвинулся к разгадке этого странного места."
@@ -486,7 +496,7 @@ label day_5_3:
     mi "Ждала ее в музыкальном клубе, но не дождалась, решила идти одна."
     mi "Алиса давно уже должна прийти."
     ya "Днем у нее были некоторе сложности. Задерживается, наверное."
-    show mi normal pioneer close at left
+    show mi normal pioneer close at left with dissolve
     mi "Можем пока вдвоем попробовать."
     ya "Нет уж, спасибо. Я ни разу в жизни не играл."
     show mi happy pioneer close
@@ -504,9 +514,10 @@ label day_5_3:
     "Даже несмотря на то,что мелодия казалось не очень сложной."
     "В какой-то момент Мику увлеклась игрой настолько, что не заметила, как я перестал играть, чтобы не портить звучание."
     stop music fadeout 2
-    scene bg ext_stage_normal_night with dissolve
-    show mi normal pioneer close at left with dspr
-    show dv normal pioneer close at center with dissolve
+    scene bg ext_stage_normal_night
+    show mi normal pioneer close at left
+    show dv normal pioneer close at center
+    with dissolve
     dv "Ого, не знала, что ты тоже играешь."
     ya "Ну уж нет! С меня хватит позориться."
     show dv smile pioneer close with dissolve
@@ -638,7 +649,7 @@ label day_5_3:
             dv "Да идите вы оба... Куда хотите."
             dv "А еще пусть расскажет что она утром с Электроником делала."
             hide dv with dissolve
-            show zh sad pioneer glasses close at center
+            show zh sad pioneer glasses close at center with dissolve
             ya "Никому она не пожалуется. Ей от вожатей в первую очередь попадет за сегодняшнее."
             jump day_5_4
 
@@ -668,8 +679,9 @@ label day_5_4:
     mz "И не поду..."
     scene bg posl3 with dspr
     $ renpy.pause (5, hard = True)
-    scene bg ext_polyana_night
-    show zh shyangry pioneer glasses close at left with dissolve
+    scene bg ext_polyana_night 
+    show zh shyangry pioneer glasses close at left 
+    with dissolve
     mz "Ты чего это такое делаешь?"
     ya "Ну а как еще мне тебе объяснить."
     mz "Не знаю."
@@ -703,7 +715,7 @@ label day_5_4:
     mz "Стараюсь не думать."
     ya "Вот и я..."
     stop music fadeout 2
-    scene bg ext_houses_night
+    scene bg ext_houses_night with dissolve
     "Мы пробыли на нашей поляне еще какое-то время, после чего вернулись в лагерь."
     "Теперь надо не привлекая внимания вернуться домой."
     show zh normal pioneer glasses close at left with dissolve
@@ -729,9 +741,9 @@ label day_5_4:
     mz "Да, на остров. Они часто туда с Леной уплывали, уж не знаю зачем."
     ya "Может, я один за ней схожу?"
     mz "Попробуй."
-    stop ambience
-    scene bg boat
-    play ambience ambience_boat_station_night
+    stop ambience fadeout 2
+    play ambience ambience_boat_station_night fadein 1
+    scene bg boat with dissolve
     $ renpy.pause (5, hard = True)
     "Надеюсь, у Алисы хватило ума не совершить какую-нибудь глупость."
     "Мне льстило внимание сразу двух девушек, но проблем от таких симпатий оказалось больше, чем хотелось."
@@ -755,10 +767,12 @@ label day_5_4:
     dv "Ничего со мной не случится. Побуду тут и вернусь обратно."
     ya "Алиса, послушай..."
     dv "Ничего не говори. Со мной все будет нормально. Оставьте меня одну."
-    stop ambience
-    scene black
+
+    scene black with dissolve
+    stop ambience fadeout 2
     $ renpy.pause (2, hard = True)
-    scene bg dom
+    scene bg dom with dissolve
+    
     "Просто сумасшедший день."
     "Мы попрощались с Женей и я незамедлительно отправился к себе в домик."
     "Сил оставалось только лечь и закрыть глаза."
