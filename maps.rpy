@@ -3,6 +3,7 @@ init:
     $ dojdvdome = "moimod//zvuki/dojdvdome.mp3"
     $ dojd = "moimod/zvuki/dojd.mp3"
     $ praznik = "moimod/zvuki/praznik.mp3"
+    $ gitara = "moimod/zvuki/gitara.mp3"
 
     image bg blur = "moimod/images/blur.jpg"
     image bg garblur = "moimod/images/garblur.jpg"
@@ -25,3 +26,10 @@ init:
     image bg libafrain = "moimod/images/libafrain.jpg"
     image bg libnight = "moimod/images/libnight.jpg"
     image bg squarerain = "moimod/images/squarerain.jpg"
+    image bg ebalo = "moimod/images/ebalo.jpg"
+    image bg posl3 = "moimod/images/posl3.png"
+    image bg mikusong = "moimod/images/mikusong.jpg"
+    image bg mikusong2 = "moimod/images/mikusong2.jpg"
+    image bg genda = "moimod/images/genda.jpg"
+    image bg zvezdi = "moimod/images/zvezdi.jpg"
+    image bg boat = "moimod/images/boat.jpg"
