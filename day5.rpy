@@ -468,7 +468,7 @@ label day_5_3:
     "Пусть это и не выражается в честном пионерском труде. Другие вон тоже не спешат. Я хотя бы социалистическую собственность не взрываю, как некоторые."
     stop ambience fadeout 1
     play ambience ambience_dining_hall_full fadein 1
-    scene bg int_dining_hall_people_day with dissolve
+    scene bg int_dining_hall_with_people_sunset with dissolve
     "Вот так стремительно пролетел очередной день."
     "Едва проснулся, а уже ужин."
     "Все хорошее, что было остается в прошлом, а впереди ждет лишь пугающая неизвестность."
@@ -569,7 +569,7 @@ label day_5_3:
     mz "Ну хватит речи тут зачитывать, не на партсобрании."
     mz "Я ведь уже согласилась."
     mz "Веди."
-    scene bg ext_houses_night
+    scene bg ext_houses_night2
     show zh normal pioneer glasses close at left with dspr
     mz "Кто это там?"
     show dv smile pioneer close at right with dissolve
@@ -592,7 +592,7 @@ label day_5_3:
             show dv smile pioneer close at right
             mz "Ладно."
             "Идея, мягко говоря, не внушала оптимизма."
-            "Хорошо если эти двое не подерутся в процессе, в чем я сомневался с каждым нашим шагом."
+            "Хорошо если эти двое не подерутся в процессе, в чем я начинал сомневаться с каждым нашим шагом."
             scene bg genda with dissolve
             show zh angry pioneer glasses close at left
             show dv angry pioneer close at right
@@ -632,7 +632,7 @@ label day_5_3:
             show zh normal pioneer glasses close at center
             mz "Наконец-то ушла."
             mz "Сил никаких нету ее слушать."
-            ya "Ну зачем ты так. Неужели нельзя было без скандала?"
+            ya "Ну зачем ты так. Неужели, нельзя было без скандала?"
             show zh bukal pioneer glasses close at left
             mz "В следующий раз подумает прежде чем лезть в чужие дела."
             ya "Добром это не кончится."
@@ -785,4 +785,4 @@ label day_5_4:
     show blink
     $renpy.pause (2)
     scene black
-    th "Продолжение следует."
+    jump label_day_7

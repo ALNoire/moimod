@@ -375,7 +375,7 @@ label day_2_2:
 label night_2:
     $ renpy.block_rollback()
     mz "Не хочу."
-    ya "Да, уж. Не любишь же ты людей."
+    ya "Да, уж. Не любишь же ты с людьми общаться."
     mz "А вот и неправда."
     show zh shyangry glasses pioneer close
     mz "Дураков не люблю и подлиз всяких."
@@ -383,7 +383,7 @@ label night_2:
     show zh shy glasses pioneer close
     mz "Пока не решила."
     ya "Тогда и я никуда не пойду. Будем сидеть тут вместе."
-    mz "А ты почему?."
+    mz "А ты почему?"
     show zh confused glasses pioneer close
     ya "Надоело, в тишине посидеть хочется. На звезды посмотреть, ощутить дуновение ночного ветра."
     mz "Получается, вместе не идем?"
